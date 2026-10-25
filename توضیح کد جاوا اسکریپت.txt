@@ -1,0 +1,138 @@
+Log in
+Sign up for free
+You said:
+این کد رو  برام توضیح بده؟  let firstName = prompt("Enter Your Name");
+let userInput = prompt("Enter Your Age");
+let age= parseInt(userInput);
+let Year = 2026-age
+consol.log(`hello${firstName},you born in ${Year}`)
+
+ChatGPT said:
+حتماً! 😊 بیا این کد جاوااسکریپت رو خط‌به‌خط بررسی کنیم تا بفهمی هر قسمت چه کاری انجام می‌ده.
+
+۱. کد اصلی تو
+
+javascript
+let firstName = prompt("Enter Your Name");
+let userInput = prompt("Enter Your Age");
+let age = parseInt(userInput);
+let Year = 2026 - age;
+consol.log(`hello${firstName},you born in ${Year}`);
+هدف این کد اینه که اسم و سن کاربر رو بگیره و سال تولدش رو محاسبه کنه و در پایان بهش پیام بده.
+
+۲. توضیح خط‌به‌خط
+خط اول: گرفتن اسم کاربر
+
+javascript
+let firstName = prompt("Enter Your Name");
+let برای تعریف یک متغیر استفاده می‌شه.
+
+firstName اسم متغیریه که اسم کاربر رو داخل خودش نگه می‌داره.
+
+prompt() یک پنجره باز می‌کنه و از کاربر ورودی می‌گیره.
+
+"Enter Your Name" پیامی هست که داخل پنجره نمایش داده می‌شه.
+
+مثلاً اگر کاربر وارد کنه Ali، مقدار متغیر firstName برابر با "Ali" می‌شه.
+
+خط دوم: گرفتن سن کاربر
+
+javascript
+let userInput = prompt("Enter Your Age");
+این خط از کاربر سنش رو می‌پرسه و ورودی رو داخل متغیر userInput ذخیره می‌کنه.
+
+مثلاً اگر کاربر عدد 20 رو وارد کنه، مقدار userInput برابر با "20" می‌شه.
+
+نکته: خروجی prompt() معمولاً از نوع رشته (string) هست؛ یعنی حتی اگر عدد وارد کنی، در ابتدا به شکل متن دریافت می‌شه.
+
+خط سوم: تبدیل متن به عدد
+
+javascript
+let age = parseInt(userInput);
+تابع parseInt() متن رو به عدد صحیح تبدیل می‌کنه.
+
+مثلاً:
+
+
+javascript
+parseInt("20")  // 20
+parseInt("25")  // 25
+چرا این کار رو انجام می‌دیم؟ چون می‌خوایم با سن کاربر محاسبات ریاضی انجام بدیم.
+
+پس اگر userInput برابر با "20" باشه، متغیر age مقدار عددی 20 رو خواهد داشت.
+
+خط چهارم: محاسبه سال تولد
+
+javascript
+let Year = 2026 - age;
+در این خط، سن کاربر از سال ۲۰۲۶ کم می‌شه.
+
+مثلاً اگر سن کاربر ۲۰ سال باشه:
+
+2026
+−
+20
+=
+2006
+2026−20=2006
+پس مقدار Year برابر با 2006 خواهد بود.
+
+نکته: این محاسبه تقریبیه؛ چون بدون دانستن روز و ماه تولد، نمی‌تونیم همیشه سال تولد رو دقیق مشخص کنیم.
+
+خط پنجم: نمایش پیام
+
+javascript
+consol.log(`hello${firstName},you born in ${Year}`)
+اینجا می‌خوایم پیام رو در کنسول مرورگر نمایش بدیم، اما دو نکته وجود داره:
+
+باید console.log بنویسی، نه consol.log؛ چون نام درست console هست.
+
+برای خوانایی بهتر، بین کلمات و متغیرها فاصله بذار.
+
+شکل صحیح:
+
+
+javascript
+console.log(`Hello ${firstName}, you were born in ${Year}`);
+در این خط:
+
+console.log() متن رو در کنسول نمایش می‌ده.
+
+بک‌تیک (`) امکان استفاده از متغیرها داخل رشته رو فراهم می‌کنه.
+
+${firstName} با اسم کاربر جایگزین می‌شه.
+
+${Year} با سال محاسبه‌شده جایگزین می‌شه.
+
+۳. نسخه اصلاح‌شده کد
+
+javascript
+
+let firstName = prompt("Enter Your Name");
+let userInput = prompt("Enter Your Age");
+
+let age = parseInt(userInput);
+let year = 2026 - age;
+
+console.log(`Hello ${firstName}, you were born in ${year}`);
+۴. یک مثال کامل از اجرای برنامه
+فرض کن کاربر این اطلاعات رو وارد کنه:
+
+Enter Your Name
+
+Ali
+
+Enter Your Age
+
+20
+
+خروجی در کنسول
+
+Hello Ali, you were born in 2006
+
+۵. سه نکته مهم که باید یاد بگیری
+متغیر (let): برای ذخیره اطلاعات استفاده می‌شه.
+
+تبدیل نوع (parseInt): متن عددی رو به عدد صحیح تبدیل می‌کنه.
+
+قالب رشته‌ای (Template Literal): با استفاده از بک‌تیک و ${} می‌تونی متغیرها رو داخل متن قرار بدی.
